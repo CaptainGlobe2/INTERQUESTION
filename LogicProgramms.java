@@ -162,11 +162,27 @@ class encap{
     }
 }
 
-class factorofnum{
+class factorofnum{//Factors can be used to distribute chocolates among children. For example, if you have 12 chocolates and 4 children, you can distribute the chocolates evenly by giving each child 3 chocolates. In this case, the factors of 12 are 1, 2, 3, 4, 6 and 12. You can use these factors to divide the chocolates evenly among the children.
     void factor(int num){
         for(int i=1;i<num;i++){
             if(num%i==0)
                 System.out.println(i);
+        }
+    }
+}
+class prime{
+    void findPrime(int n){
+        int i,f=0;
+        for(i=2;i<n;i++){
+            if(n%i==0){
+                f=1;
+            }
+        }
+        if(f==1){
+            System.out.println("not a prime");
+        }
+        else{
+            System.out.println(" a prime");
         }
     }
 }
@@ -192,7 +208,9 @@ public class LogicProgramms{
         //eca.setGender("male");
         //eca.setName("nobody");
         //eca.display();
-        factorofnum fc=new factorofnum();
-        fc.factor(12);
+        //factorofnum fc=new factorofnum();
+        //fc.factor(12);
+        prime p=new prime();
+        p.findPrime(1051);
     }
 }
