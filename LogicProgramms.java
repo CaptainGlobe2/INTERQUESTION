@@ -2,30 +2,46 @@ import java.util.Scanner;
 
 class copyThePositiveElementFromOneArrayToAnother{
     void copy1(){
-        int[] b= new int[10];
-        //int[] a= new int[5];
-        int a[]={1,2,3,-5,5};
-        int j=0;
-        System.out.println("enter the element in the array and the size is 5");
-        Scanner input = new Scanner(System.in);
-        int length = a.length;
-        System.out.println(a.length);
-        int i=0;
-        while(i<length){
-            if(a[i]>0){
-                b[j]=a[i];
-            j++;
-            }
+    //     int[] b= new int[10];
+    //     //int[] a= new int[5];
+    //     int a[]={1,2,3,-5,5};
+    //     int j=0;
+    //     System.out.println("enter the element in the array and the size is 5");
+    //     Scanner input = new Scanner(System.in);
+    //     int length = a.length;
+    //     System.out.println(a.length);
+    //     int i=0;
+    //     while(i<length){
+    //         if(a[i]>0){
+    //             b[j]=a[i];
+    //         j++;
+    //         }
             
-            i++;
-        }
-        for(j=0;j<length;j++){
-            System.out.println(b[j]);
+    //         i++;
+    //     }
+    //     for(j=0;j<length;j++){
+    //         System.out.println(b[j]);
+    //     }
+        
+    //     }
+    // }
+    int[] a={2,3,4,5,-2,1
+    };
+    int[] b=new int[a.length];
+    int i,j=0;
+    for(i=0;i<a.length;i++){
+        if(a[i]>0){
+            b[j]=a[i];
+            j++;
         }
         
-        }
+    }
+    for(j=0;j<a.length;j++){
+        System.out.println(b[j]);
     }
 
+    }
+}
 class arrSorting{
     void out(){
         int[] k={4,3,6,7,8};
@@ -50,12 +66,133 @@ class arrSorting{
     }
 }
 
+class leapYear{
+    void  leapYearCheck(){
+        int n;
+        System.out.println("enter the year: ");
+        Scanner input = new Scanner(System.in);
+        n=input.nextInt();
+        if(n%4==0){
+            if(n%100==0){
+                if(n%400==0){
+                    // return true; void method cannot return anything 
+                    System.out.println("it is leap year");
+                }
+                else{
+                    System.out.println("it is not a leap year");
+                }
+            }
+            else{
+                System.out.println("it is leap year");//if the year is not 
+            }
+        }
+        else{
+            System.out.println("it is not leap year");
+        }
+    }
+}
+
+class findTheSumOfTheDigits{
+    int sumOfDigits(int n){
+        int sum=0;
+        while(n>0){
+        sum=sum+n%10;
+        n=n/10;
+        //you don't evrey time to increment the value it check the condition and run the code until the codition is true
+        //this is the place where we use the while loop and where to use the for and while loop is a concern for newbie The for loop is typically used when you know the number of iterations in advance or when you need to iterate over a range of values. It consists of three parts: initialization, condition, and iteration.
+        }
+
+        
+        //System.out.println(sum);
+        return sum;
+    }
+}
+
+class reverseNumber{
+     void revNum(){
+        int number;
+        int revnumber=0;
+        System.out.println("enter the number i will reverse it: ");
+        Scanner input =new Scanner(System.in);
+        number=input.nextInt();
+        while(number>0){
+            revnumber=(revnumber*10)+number%10;
+            number=number/10;
+        }
+        System.out.println(revnumber);
+
+     }
+}
+
+class encap{
+    private String name;
+    private int age;
+    private String gender;
+        // Getter for 'name'
+    public String getName() {
+        return name;
+    }
+    
+    // Setter for 'name'
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    // Getter for 'age'
+    public int getAge() {
+        return age;
+    }
+    
+    // Setter for 'age'
+    public void setAge(int age) {
+        this.age = age;
+    }
+    
+    // Getter for 'gender'
+    public String getGender() {
+        return gender;
+    }
+    
+    // Setter for 'gender'
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+    void display(){
+        System.out.println("name:"+name+"age: "+age+"gender: "+gender);
+    }
+}
+
+class factorofnum{
+    void factor(int num){
+        for(int i=1;i<num;i++){
+            if(num%i==0)
+                System.out.println(i);
+        }
+    }
+}
+
+
 
 public class LogicProgramms{
     public static void main (String []args){
-        copyThePositiveElementFromOneArrayToAnother ca=new copyThePositiveElementFromOneArrayToAnother();
+        //copyThePositiveElementFromOneArrayToAnother ca=new copyThePositiveElementFromOneArrayToAnother();
         //ca.copy1();
-        arrSorting as=new arrSorting();
-        as.out(); 
+       // arrSorting as=new arrSorting();
+       // as.out(); 
+        //leapYear lc=new leapYear();
+        //lc.leapYearCheck();
+        //int result;
+        //findTheSumOfTheDigits sod = new findTheSumOfTheDigits();
+        //result=sod.sumOfDigits(1234);
+        //System.out.println("sum of the digits is :"+result);
+        //reverseNumber rn=new reverseNumber();
+        //rn.revNum();
+        //encap eca=new encap();
+        //eca.setAge(20);
+        //eca.setGender("male");
+        //eca.setName("nobody");
+        //eca.display();
+        factorofnum fc=new factorofnum();
+        fc.factor(12);
     }
 }
