@@ -337,6 +337,21 @@ class pattern{
     }
 }
 
+class fact{
+    int factoria(int n){
+        // //int f=1;
+        // while(n!=0)
+        //     //f=f*factoria(n-1);
+        //     return n*factoria(n-1);
+        // return n;
+        if (n == 0 || n == 1) {
+            return 1; // base case
+        } else {
+            return n * factoria(n - 1); // recursive case
+        }
+    }
+}
+
 
 
 
@@ -373,7 +388,11 @@ public class LogicProgramms{
         //pattern.basicpattern6();
         //pattern.basicpattern8();
         //pattern.basicpattern9();
-        pattern.basicpatternx();
+        //pattern.basicpatternx();
+        fact f =new fact();
+        int ans;
+        ans=f.factoria(4);
+        System.out.println(ans);
 
     }
 }
