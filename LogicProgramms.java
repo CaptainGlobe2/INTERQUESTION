@@ -92,19 +92,19 @@ class leapYear{
     }
 }
 
-class findTheSumOfTheDigits{
-    int sumOfDigits(int n){
-        int sum=0;
-        while(n>0){
-        sum=sum+n%10;
-        n=n/10;
-        //you don't evrey time to increment the value it check the condition and run the code until the codition is true
-        //this is the place where we use the while loop and where to use the for and while loop is a concern for newbie The for loop is typically used when you know the number of iterations in advance or when you need to iterate over a range of values. It consists of three parts: initialization, condition, and iteration.
-        }
+    class findTheSumOfTheDigits{
+        int sumOfDigits(int n){
+            int sum=0;
+            while(n>0){
+            sum=sum+n%10;
+            n=n/10;
+            //you don't evrey time to increment the value it check the condition and run the code until the codition is true
+            //this is the place where we use the while loop and where to use the for and while loop is a concern for newbie The for loop is typically used when you know the number of iterations in advance or when you need to iterate over a range of values. It consists of three parts: initialization, condition, and iteration.
+            }
 
-        
-        //System.out.println(sum);
-        return sum;
+            
+            //System.out.println(sum);
+            return sum;
     }
 }
 
@@ -166,7 +166,7 @@ class factorofnum{//Factors can be used to distribute chocolates among children.
     void factor(int num){
         for(int i=1;i<num;i++){
             if(num%i==0)
-                System.out.println(i);
+                System.out.print(i);
         }
     }
 }
@@ -186,6 +186,157 @@ class prime{
         }
     }
 }
+
+class pattern{
+    static void basicpattern1(){
+        System.out.println("enter the number to print in right angle");
+        Scanner input = new Scanner(System.in);
+        int n;
+        n=input.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(i);
+            }
+            System.out.println(" ");
+        }
+
+    }
+    static void basicpatternrev2(){
+        System.out.println("enter the number to print in right angle");
+        Scanner input = new Scanner(System.in);
+        int n;
+        n=input.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=i;j<=n;j++){
+                System.out.print(j);
+            }
+            System.out.println(" ");
+        }
+    }
+    static void basicpattern2(){
+        System.out.println("enter the number to print in right angle");
+        Scanner input = new Scanner(System.in);
+        int n;
+        n=input.nextInt();
+        for(int i=0;i<=n;i++){
+            for(int j=1;j<=i+1;j++){
+                System.out.print(j);
+            }
+            System.out.println(" ");
+        }
+    }
+    static void basicpattern3(){
+        System.out.println("enter the number to print in right angle");
+        Scanner input = new Scanner(System.in);
+        int n;
+        n=input.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            System.out.println(" ");
+        }
+    }
+    static void basicpattern4(){
+        System.out.println("enter the number to print in right angle");
+        Scanner input = new Scanner(System.in);
+        int n;
+        int num=1;
+        n=input.nextInt();
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(num);
+                num++;
+            }
+            System.out.println(" ");
+        }
+    }
+    static void diamondpattern(){
+        System.out.println("enter the odd number for printing the diamod");
+        Scanner input =new Scanner(System.in);
+        int row;
+        row =input.nextInt();
+        for(int i=1;i<=row;i++){
+            for(int j=1;j<=row-i;j++){
+                System.out.print(" ");
+
+            }
+            for(int k=1;k<=(2*i)-1;k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=row-1;i>=1;i--){
+            for(int j=1;j<=row-i;j++){
+                System.out.print(" ");
+            }
+            for(int k=1;k<=(2*i)-1;k++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    static void basicpattern5(){
+        int r=4;
+        for(int i=r;i>=1;i--){
+            for(int j=1;j<=i;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    static void basicpattern6(){
+        int r=5;
+        for(int i=1;i<=r;i++){
+            for(int j=i;j<=r;j++){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    static void basicpattern7(){
+        int r=5;
+        for(int i=r;i>=1;i--){
+            for(int j=r;j>=i;j--){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    static void basicpattern8(){
+        int r=5;
+        for(int i=1;i<=r;i++){
+            for(int j=r;j>=i;j--){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    static void basicpattern9(){
+        int r=5;
+        for(int i=r;i>=1;i--){
+            for(int j=i;j>=1;j--){
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+    static void basicpatternx(){
+        int r=5;
+        for(int i=1;i<=r;i++){
+            for(int j=1;j<=r;j++){
+                if(i==j||i+j==r+1){
+                    System.out.print(j);
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
 
 
 
@@ -210,7 +361,19 @@ public class LogicProgramms{
         //eca.display();
         //factorofnum fc=new factorofnum();
         //fc.factor(12);
-        prime p=new prime();
-        p.findPrime(1051);
+        //prime p=new prime();
+        //p.findPrime(1051);
+        //pattern.basicpattern1();
+        //pattern.basicpatternrev2();
+        //pattern.basicpattern2();
+        //pattern.basicpattern3();
+        //pattern.basicpattern4();
+        //pattern.diamondpattern();
+        //pattern.basicpattern5();
+        //pattern.basicpattern6();
+        //pattern.basicpattern8();
+        //pattern.basicpattern9();
+        pattern.basicpatternx();
+
     }
 }
