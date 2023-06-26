@@ -94,6 +94,12 @@ class leapYear{
 
     class findTheSumOfTheDigits{
         int sumOfDigits(int n){
+            System.out.println("just checking the return method is getting the value or not");
+            Scanner input = new Scanner(System.in);
+            int k;
+            k=input.nextInt();
+            System.out.println(k);
+
             int sum=0;
             while(n>0){
             sum=sum+n%10;
@@ -352,7 +358,85 @@ class fact{
     }
 }
 
+class perfectnumber{
+    static void perfectnum(){
+        int sum=0;
+        System.out.println("enter the number:");
+        Scanner input = new Scanner(System.in);
+        int n=input.nextInt();
+        for(int i=1;i<=n/2;i++){
+            if(n%i==0){
+                
+                sum=sum+i;
+            }
+           
+        }
+         if(n==sum){
+                System.out.println("it is perfect number");
+            }
+            else{
+                System.out.println("it is not perfect number");
+            }
+    }
+}
 
+class powerofnumber{
+    static void pownum(){
+        System.out.println("enter the number: ");
+        Scanner input = new Scanner(System.in);
+        int n,p;
+        int res=1;
+        n=input.nextInt();
+        System.out.println("enter the power of the number: ");
+        p=input.nextInt();
+        for(int i=1;i<=p;i++){
+            res=res*n;
+        }
+        System.out.println(res);
+    }
+}
+
+class fibonacci{
+    static void fib(){
+        System.out.println("enter the number :");
+        int n;
+        Scanner input = new Scanner(System.in);
+        n=input.nextInt();
+        n=n-2;
+        int a=0;
+        int b=1;
+        System.out.print("1");
+        while(n>0){
+            
+            int c=a+b;
+            System.out.print(c);
+            a=b;
+            b=c;
+            n--;
+        }
+    }
+}
+
+
+class lcm{
+    static void finlcm(){
+        System.out.println("enter two numbers");
+        Scanner input = new Scanner(System.in);
+        int a,b;
+        a=input.nextInt();
+        b=input.nextInt();
+        int max;
+        max=Math.max(a, b);
+        int step;
+        step=max;
+        while(true){
+            if(max%a==0&&max%b==0)
+                break;
+            max=max+step;
+        }
+        System.out.println("lcm is: "+max);
+    }
+}
 
 
 public class LogicProgramms{
@@ -389,10 +473,16 @@ public class LogicProgramms{
         //pattern.basicpattern8();
         //pattern.basicpattern9();
         //pattern.basicpatternx();
-        fact f =new fact();
-        int ans;
-        ans=f.factoria(4);
-        System.out.println(ans);
-
+        // fact f =new fact();
+        // int ans;
+        // ans=f.factoria(4);
+        // System.out.println(ans);
+        // perfectnumber pf =new perfectnumber();
+        // pf.perfectnum();
+        // findTheSumOfTheDigits sc =new findTheSumOfTheDigits();
+        // sc.sumOfDigits(5);
+        //powerofnumber.pownum();
+        //fibonacci.fib();
+        lcm.finlcm();
     }
 }
