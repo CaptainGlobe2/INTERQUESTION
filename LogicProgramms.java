@@ -341,7 +341,7 @@ class pattern{
             System.out.println();
         }
     }
-    static void basicpattern11(){
+    static void basicpattern11(){//box
         int r=5;
         for(int i=1;i<=r;i++){
             for(int j=1;j<=r;j++){
@@ -353,6 +353,35 @@ class pattern{
                 }
                 
             }
+            System.out.println();
+        }
+    }
+    static void basicpatternpry(){
+        int r=5;
+        int r1=r;
+        for(int i=1;i<2*r;i=i+2){
+            for(int j=r1;j>0;j--){
+                System.out.print(" ");
+            }
+            for(int k=1;k<=i;k++){
+                System.out.print("#");
+            }
+            System.out.println();
+            r1--;
+        }
+    }
+    static void basicpattern12(){
+        int row=5;
+        int r1=row;
+        for(int i=1;i<=row;i++){
+            for(int j=1;j<=r1;j++){
+                System.out.print(j);
+            }
+            for(int k=1;k<=i;k++){
+                System.out.print(" ");
+                System.out.print(k);
+            }
+            r1--;
             System.out.println();
         }
     }
@@ -551,6 +580,6 @@ public class LogicProgramms{
         //multiplication.normul();
         //multiplication.redumul();
         //dopeinarr.dupinarr();
-        pattern.basicpattern11();
+        pattern.basicpattern12();
     }
 }
