@@ -341,6 +341,21 @@ class pattern{
             System.out.println();
         }
     }
+    static void basicpattern11(){
+        int r=5;
+        for(int i=1;i<=r;i++){
+            for(int j=1;j<=r;j++){
+                if(i==1||j==r||j==1||i==r){
+                    System.out.print(j);
+                }
+                else{
+                    System.out.print(" ");
+                }
+                
+            }
+            System.out.println();
+        }
+    }
 }
 
 class fact{
@@ -473,7 +488,7 @@ class dopeinarr{
         int[] arr1=new int[arr.length];
         System.out.println(arr.length);
         for(int i=0;i<arr.length;i++){
-            for(int j=i+1;j<arr.length;j++){
+            for(int j=i+1;j<arr.length-1;j++){
                 if(arr[i]!=arr[j]){
                     arr1[i]=arr[i];
                     //continue;
@@ -492,8 +507,8 @@ public class LogicProgramms{
     public static void main (String []args){
         //copyThePositiveElementFromOneArrayToAnother ca=new copyThePositiveElementFromOneArrayToAnother();
         //ca.copy1();
-       // arrSorting as=new arrSorting();
-       // as.out(); 
+        // arrSorting as=new arrSorting();
+        // as.out(); 
         //leapYear lc=new leapYear();
         //lc.leapYearCheck();
         //int result;
@@ -535,6 +550,7 @@ public class LogicProgramms{
         //lcm.finlcm();
         //multiplication.normul();
         //multiplication.redumul();
-        dopeinarr.dupinarr();
+        //dopeinarr.dupinarr();
+        pattern.basicpattern11();
     }
 }
