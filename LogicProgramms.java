@@ -438,6 +438,55 @@ class lcm{
     }
 }
 
+class multiplication{
+    static void normul(){
+        System.out.println("enter the table: ");
+        Scanner input=new Scanner(System.in);
+        int t=input.nextInt();
+        System.out.println("enter the number of times it multiplies: ");
+        int times=input.nextInt();
+        int output=1;
+        for(int i=1;i<=times;i++){
+            output=t*i;
+            System.out.println(i+"X"+t+"="+output);
+        }
+    }
+    static void redumul(){//it just testing the ways don't use this method
+        System.out.println("enter the table: ");
+        Scanner input=new Scanner(System.in);
+        int t=input.nextInt();
+        System.out.println("enter the number of times it multiplies: ");
+        int times=input.nextInt();
+        int output=t;
+        System.out.println(output);
+        while(times>1){
+            output=output+t;
+            times--;
+            System.out.println(output);
+        }
+    }
+}
+
+class dopeinarr{
+    static void dupinarr(){
+        int[] arr={2,5,2,1};
+        int[] arr1=new int[arr.length];
+        System.out.println(arr.length);
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]!=arr[j]){
+                    arr1[i]=arr[i];
+                    //continue;
+                    
+                }
+                
+                
+            }
+        }
+        for (int i = 0; i < arr1.length; i++)
+            System.out.println(arr1[i]);
+    }
+}
 
 public class LogicProgramms{
     public static void main (String []args){
@@ -483,6 +532,9 @@ public class LogicProgramms{
         // sc.sumOfDigits(5);
         //powerofnumber.pownum();
         //fibonacci.fib();
-        lcm.finlcm();
+        //lcm.finlcm();
+        //multiplication.normul();
+        //multiplication.redumul();
+        dopeinarr.dupinarr();
     }
 }
