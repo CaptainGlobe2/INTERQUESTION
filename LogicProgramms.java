@@ -521,8 +521,10 @@ class dopeinarr{
                 if(arr[i]!=arr[j]){
                     arr1[i]=arr[i];
                     //continue;
+                    //this is not working because of we store the value of the array in the oth
                     
                 }
+                System.out.println(j);
                 
                 
             }
@@ -531,6 +533,8 @@ class dopeinarr{
             System.out.println(arr1[i]);
     }
 }
+
+
 
 public class LogicProgramms{
     public static void main (String []args){
