@@ -511,30 +511,105 @@ class multiplication{
     }
 }
 
-class dopeinarr{
-    static void dupinarr(){
-        int[] arr={2,5,2,1};
-        int[] arr1=new int[arr.length];
-        System.out.println(arr.length);
-        for(int i=0;i<arr.length;i++){
-            for(int j=i+1;j<arr.length-1;j++){
-                if(arr[i]!=arr[j]){
-                    arr1[i]=arr[i];
-                    //continue;
-                    //this is not working because of we store the value of the array in the oth
+// class dopeinarr{
+//     static void dupinarr(){
+//         int[] arr={2,5,2,1};
+//         int[] arr1=new int[arr.length];
+//         System.out.println(arr.length);
+//         for(int i=0;i<arr.length;i++){
+//             for(int j=i+1;j<arr.length-1;j++){
+//                 if(arr[i]!=arr[j]){
+//                     arr1[i]=arr[i];
+//                     //continue;
+//                     //this is not working because of we store the value of the array in the oth
                     
+//                 }
+//                 System.out.println(j);
+                
+                
+//             }
+//         }
+//         for (int i = 0; i < arr1.length; i++)
+//             System.out.println(arr1[i]);
+//     }
+// }
+
+class dopeinarr{
+    static void dopeeleminarr(){
+        int arr[]={2,3,4,5,62,3,4};
+        for(int i=0;i<arr.length;i++){
+            int c=0;
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    c++;
                 }
-                System.out.println(j);
-                
-                
             }
+            if(c==0){
+            System.out.print(arr[i]+",");
+            }
+            
         }
-        for (int i = 0; i < arr1.length; i++)
-            System.out.println(arr1[i]);
+
     }
 }
 
 
+class biggestN{
+    static void finbig(){
+        int[] arr=new int[6];
+        Scanner input = new Scanner(System.in);
+        for(int i=0;i<arr.length;i++){
+            arr[i]=input.nextInt();
+        }
+        int big=arr[0];
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[j]>big){
+                    big=arr[j];
+                }
+            }
+        }
+        System.out.println(big);
+    }
+}
+
+class store0attail{
+   static void  zeroattail(){
+    int arr[]={3,2,4,0,5,0};
+    int res[]=new int[arr.length];
+    int c=0;
+    for(int i=0;i<arr.length;i++){
+        if(arr[i]!=0){
+            res[c]=arr[i];
+            c++;
+        }
+
+    }
+    for(int i=c;i<arr.length;i++){
+        res[i]=0;
+    }
+
+    for(int i=0;i<arr.length;i++){
+        System.out.println(res[i]);
+    }
+   }
+}
+
+class oddevencount{
+    static void  countoddeven(){
+        int arr[]={3,4,5,7,6};
+        int even=0,odd=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]%2==0){
+                even++;
+            }
+            else{
+                odd++;
+            }
+        }
+        System.out.println("total of odd is "+odd+" total of even is "+even);
+    }
+}
 
 public class LogicProgramms{
     public static void main (String []args){
@@ -584,6 +659,10 @@ public class LogicProgramms{
         //multiplication.normul();
         //multiplication.redumul();
         //dopeinarr.dupinarr();
-        pattern.basicpattern12();
+        //pattern.basicpattern12();
+        //biggestN.finbig();
+        //store0attail.zeroattail();
+        //oddevencount.countoddeven();
+        dopeinarr.dopeeleminarr();
     }
 }
