@@ -611,6 +611,28 @@ class oddevencount{
     }
 }
 
+class palindrome{
+    static void palin(){
+        int c=0;
+        System.out.println("enter the word: ");
+        Scanner input =new Scanner(System.in);
+        String str =input.nextLine();
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)==str.charAt(str.length()-1-i)){
+                c++;
+                
+            }
+        }
+        if(c==str.length()){
+            System.out.println("the given word is palindrome");
+        }
+        else{
+            System.out.println("it is not palidrome");
+        }
+        System.out.println(str.length());
+    }
+}
+
 public class LogicProgramms{
     public static void main (String []args){
         //copyThePositiveElementFromOneArrayToAnother ca=new copyThePositiveElementFromOneArrayToAnother();
@@ -663,6 +685,7 @@ public class LogicProgramms{
         //biggestN.finbig();
         //store0attail.zeroattail();
         //oddevencount.countoddeven();
-        dopeinarr.dopeeleminarr();
+        //dopeinarr.dopeeleminarr();
+        palindrome.palin();
     }
 }
