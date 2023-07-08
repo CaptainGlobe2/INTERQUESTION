@@ -618,7 +618,7 @@ class palindrome{
         Scanner input =new Scanner(System.in);
         String str =input.nextLine();
         for(int i=0;i<str.length();i++){
-            if(str.charAt(i)==str.charAt(str.length()-1-i)){
+            if(str.charAt(i)==str.charAt(str.length()-1-i)){//first i give outside -1 and -i its totaly change the value so gives inside the charAt funciton it works properly
                 c++;
                 
             }
