@@ -631,6 +631,93 @@ class palindrome{
         }
         System.out.println(str.length());
     }
+    // class arr{
+    //     // int intitalCapcity=8;
+    //     // int[] arr = new int[intitalCapcity];
+    //     // int capcity = intitalCapcity;
+    //     // int size=0;
+    //     int arr[];
+    //     int size;
+    //     int initialCapcity=8;
+    //     int capcity=initialCapcity;//this is the field if we created and assign the starting value we have to create the class every time so we have initialize the constructor
+    //     arr(){
+    //         size=0;
+    //         arr=new int[initialCapcity];
+    //         capcity=initialCapcity;
+    //     }
+    //     public void expandArr(){
+    //         capcity=capcity*2;
+    //         arr=java.util.Array.copyOf(arr, capacity);
+    //     }
+    //     public  void add(){
+    //         if(size==capcity){
+    //             expandArr();
+    //         }
+    //         System.out.println("enter the value:");
+    //         Scanner input=new Scanner(System.in);
+    //         int val =input.nextInt();
+    //         arr[size++]=val;
+    //     }
+
+
+    //     public  void insertEle(int pos,int data){
+    //         for(int i=size;i>=pos;i--){
+    //             arr[i+1]=arr[i];
+    //         }
+    //         arr[pos]=data;
+    //         size++;
+    //     }
+    //     public void deleteEle(int pos){
+    //         for(int i=pos;i<=size;i++){
+    //             arr[i]=arr[i+1];
+    //         }
+    //         size--;
+    //     }
+    //     public void dispaly(){
+    //         for(int i=0;i<=size;i++){
+    //             System.out.println(arr[i]);
+    //         }
+    //     }
+    //     public void output(){
+    //         while(true){
+    //         System.out.println("1.Insert at the end ");
+    //         System.out.println("2.Display the List");
+    //         System.out.println("3.Insert at Specified Positon");
+    //         System.out.println("4.Delete from specified position");
+    //         System.out.println("5.Exit");
+    //         System.out.print("enter the choice: ");
+    //         Scanner input = new Scanner(System.in);
+    //         int choice= input.nextInt();
+    //         int val,pos;
+    //         switch(choice){
+    //             case 1:
+    //                 add();
+    //                 break;
+    //             case 2:
+    //                 dispaly();
+    //                 break;
+    //             case 3:
+    //                 System.out.println("enter the position ");
+    //                  pos =input.nextInt();
+    //                 System.out.println("enter the value: ");
+    //                  val=input.nextInt();
+    //                  insertEle(pos,val);
+    //                  break;
+    //             case 4:
+    //                 System.out.println("enter the position to delete ");
+    //                 pos=input.nextInt();
+    //                 deleteEle(pos);
+    //                 break;
+    //             case 5:
+    //                 System.exit(0);
+    //             default:
+    //                 System.out.println("invalid choice");
+    //         }
+            
+    //     }
+    //     }
+        
+    //}
 }
 
 public class LogicProgramms{
