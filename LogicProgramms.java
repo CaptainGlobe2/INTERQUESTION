@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+
+
 class copyThePositiveElementFromOneArrayToAnother{
     void copy1(){
     //     int[] b= new int[10];
@@ -631,6 +633,7 @@ class palindrome{
         }
         System.out.println(str.length());
     }
+}
     // class arr{
     //     // int intitalCapcity=8;
     //     // int[] arr = new int[intitalCapcity];
@@ -718,7 +721,56 @@ class palindrome{
     //     }
         
     //}
-}
+
+    class primeInRange{
+        static void pinrange(){
+            System.out.println("enter the two numbers for range a&b:");
+            Scanner input = new Scanner(System.in);
+            int a=input.nextInt();
+            int b=input.nextInt();
+            for(int i=a;i<=b;i++){
+                isPrime(i);
+                System.out.print(i);
+            }
+        }
+        static boolean isPrime (int num){
+            if(num<2)
+                return false;
+            
+            for(int i=2;i<num;i++){
+                if(num%i==0){
+                return false;
+                }
+                
+            }
+            return true;
+        }
+
+    }
+
+    class friendlyNum{
+         static void find(){
+            int n1=6;
+            int n2=12;
+            int num1=getDiv(n1);
+            int num2 = getDiv(n2);
+            if(num1/n1==1 && num2/n2==1){
+                System.out.println("it is friendly number");
+            }
+            else{
+                System.out.println("it is not friendly number");
+            }
+        }
+        static int getDiv(int n){
+            int sum=0;
+            for(int i=1;i<n;i++){
+                if(n%i==0){sum=sum+i;}
+                
+            }
+            return sum;
+        }
+    }
+
 
 public class LogicProgramms{
     public static void main (String []args){
@@ -773,6 +825,8 @@ public class LogicProgramms{
         //store0attail.zeroattail();
         //oddevencount.countoddeven();
         //dopeinarr.dopeeleminarr();
-        palindrome.palin();
+        //palindrome.palin();
+        //primeInRange.pinrange();
+        friendlyNum.find();
     }
 }
