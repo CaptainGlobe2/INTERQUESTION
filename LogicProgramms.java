@@ -771,6 +771,34 @@ class palindrome{
         }
     }
 
+// class loopInLL{
+//     Node head;
+
+//     class Node{
+//         int data;
+//         Node next;
+
+//         Node(int val){
+//             data=val;
+//             next=null;
+//         }
+//     }
+//     loopInLL(){
+//         head=null;
+//     }
+//     Node slow = head;
+//     Node fast = head;
+
+//     while(slow!=null&&fast!=null&&fast!=null){
+//         slow=head.next;
+//         fast=fast.next.next;
+//         if(slow==fast){
+//             return true;
+//         }
+//     }
+//     return flase;
+// }
+
 
 public class LogicProgramms{
     public static void main (String []args){
