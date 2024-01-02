@@ -800,12 +800,43 @@ class palindrome{
 // }
 
 
-class SnakeMat{
-    int[][] arr={{1,2,3},{4,5,6},{7,8,9}};
-    int len=arr.length;
-    for(int i=0;i<len;i++){
+// class SnakeMat{
+//     int[][] arr={{1,2,3},{4,5,6},{7,8,9}};
+//     int[][] arr1=new int[arr.length][arr[0].length];
+//     int len=arr.length;
+//     for(int i=0;i<len;i++){
         
+//         if(i%2==0){
+//             for(int j=0;j<len;j++){
+//                 arr[i][j]=arr1[i][j];
+//             }
+//         }
+//         else{
+//             for(int j=len-1;j>=0;j--){
+//                 arr[i][j]=arr1[i][j];
+//             }
+//         }
+//     }
+// }
+
+class ArrLeader{
+    static void Arr(){
+        int[] arr={2,4,5,7,3};
+    int arrSize=arr.length;
+    int max=-1;
+    int arr1[]=new int[arrSize];
+    for(int i=arrSize-1;i>=0;i--){
+        if(max<arr[i]){
+            max=arr[i];
+            //for(int j=0;j<arrSize;j++)
+                arr1[i]=max;
+        }
     }
+    for(int k=0;k<arrSize-1;k++){
+        System.out.println(arr1[k]);
+    }
+    }
+    
 }
 
 public class LogicProgramms{
@@ -863,6 +894,7 @@ public class LogicProgramms{
         //dopeinarr.dopeeleminarr();
         //palindrome.palin();
         //primeInRange.pinrange();
-        friendlyNum.find();
+        //friendlyNum.find();
+        ArrLeader.Arr();
     }
 }
